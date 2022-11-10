@@ -9,8 +9,8 @@ type ViteProps = {
   mode: string;
 };
 export default ({ mode }: ViteProps) => {
-  console.log(mode, 'mode')
-  console.log(loadEnv(mode, process.cwd()))
+  // console.log(mode, 'mode')
+  // console.log(loadEnv(mode, process.cwd()))
   return defineConfig({
     plugins: [vue(), vueJsx()],
     resolve: {
@@ -29,9 +29,9 @@ export default ({ mode }: ViteProps) => {
     server: {
       proxy: {
         "/api": {
-          // vite提供的loadEnv可以确认环境变量 
+          // vite提供的loadEnv可以确认环境变量
           // mode可以拿到当前环境变量 development/test/production
-          // 直接读取到根目录下的配置文件 .env.dev/.env.prod/.env.test { VITE_ENV: 'test', VITE_API_URL: 'http://test/' }
+          // 直接读取到根目录下的配置文件 .env.dev/.env.prod/.env.test
           target: loadEnv(mode, process.cwd()).VITE_API_URL,
           ws: true,
           changeOrigin: true,
