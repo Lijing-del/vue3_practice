@@ -9,8 +9,9 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
     alias: {
+      // 路径别名
       '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+    },
   },
   css: {
     preprocessorOptions: {

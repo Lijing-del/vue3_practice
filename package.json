@@ -1,9 +1,14 @@
 {
   "name": "lianxi_vue3",
   "version": "0.0.0",
+  "license": "ISC",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check build-only",
+    "dev": "vite --mode dev",
+    "test": "vite --mode test",
+    "prod": "vite --mode prod",
+    "build:dev": "run-p type-check build-only --mode dev",
+    "build:test": "run-p type-check build-only --mode test",
+    "build:prod": "run-p type-check build-only --mode prod",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
