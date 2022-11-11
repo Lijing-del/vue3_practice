@@ -1,6 +1,12 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <button>
+      <svg-icon iconName="icon-hanbaopisa" />
+    </button>
+    <button>
+      <svg-icon iconName="icon-tianqi_baoyu" />
+    </button>
   </div>
 </template>
 
